@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+	<title>The GitHub Finder</title>
+</head>
+<body style="color: #444">
+	<div class="card bg-dark">
+		<div align="center" class="card-header">
+			<span style="color: white">GitHub Finder</span>
+		</div>
+	</div> <br>
+	
+	<div id="error" class="container card" style="display:none; border:none"></div>
+
+	<div class="container card mb-5">
+		<div class="card-body">
+			<h2 align="center" class="display-4 mb-3">Search GitHub Users</h2>
+			<label for="user">Enter the username to fetch a user's profile info and repos</label>
+			<div class="input-group mb-3">
+  				<input type="text" id="user" class="form-control" placeholder="GitHub Username" aria-label="GitHub Username" aria-describedby="button">
+			  <div class="input-group-append">
+			    <button class="btn btn-outline-info" type="button" id="button"
+			    style="padding-left: 20px; padding-right: 20px">Search</button>
+			  </div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container card mb-5" id="info" style="border:none; display:none">
+		<div class="card-header">User Profile</div>
+		<div class="card mb-3">
+		  <div class="row no-gutters">
+		    <div align="center" class="col-md-4">
+		      <img src="F010.png" class="card-img mb-3" style="margin-top: 20px;">
+		      <a id="profile" href="#" target="_blank" class="btn btn-primary btn-lg mb-3" style="padding-left: 50px; padding-right: 50px; border-radius: 50px">View Profile</a>
+		    </div>
+		    <div class="col-md-8">
+		      <div class="card-body">
+		        <h2 class="card-title mb-4" id="login">Oof</h2>
+		        <p class="mb-4"></p>
+				<div align="center" class="mb-4">
+					<button id="repos" class="btn btn-outline-primary" disabled></button>
+					<button id="gists" class="btn btn-outline-warning" disabled></button>
+					<button id="followers" class="btn btn-outline-success" disabled></button>
+					<button id="following" class="btn btn-outline-danger" disabled></button>
+				</div>
+
+		        <table class="table table-bordered">
+		        	<tr>
+		        		<th>Name</th>
+		        		<td id="name"></td>
+		        	</tr>
+		        	<tr>
+				    	<th>Email</th>
+				    	<td id="email"></td>
+				  	</tr>
+				  	<tr>
+				  		<th>Location</th>
+				  		<td id="location"></td>
+				  	</tr>
+				  	<tr>
+				  		<th>Member Since</th>
+				  		<td id="date"></td>
+				  	</tr>
+		        </table>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+
+	<div class="container card mb-5" id="repo" style="border:none; display:none">
+		<div class="card-header">Recent Repos</div>
+		<div class="card-body" style="border: 1px solid #e5e5e5">
+			<a href="#">Face Detection</a>
+			<button class="btn btn-warning btn-sm float-right" style="margin-right: 10px" disabled>Forks</button>
+			<button class="btn btn-success btn-sm float-right" style="margin-right: 10px" disabled>Watchers</button>
+			<button class="btn btn-primary btn-sm float-right" style="margin-right: 10px" disabled>Stars</button>
+		</div>
+		<div class="card-body" style="border: 1px solid #e5e5e5">
+			<a href="#">Face Detection</a>
+			<button class="btn btn-warning btn-sm float-right" style="margin-right: 10px" disabled>Forks</button>
+			<button class="btn btn-success btn-sm float-right" style="margin-right: 10px" disabled>Watchers</button>
+			<button class="btn btn-primary btn-sm float-right" style="margin-right: 10px" disabled>Stars</button>
+		</div>
+	</div>
+	
+	<footer align="center">
+		<small class="text-muted">Yash Sanjeev - GitHub Finder &copy</small>
+	</footer>
+	
+	<style>
+		footer {
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			text-align: center;
+			padding-bottom: 1rem;
+			background: #fefefe
+		}
+
+		a {
+			color: #6ebfb5;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: #0f4c75;
+			text-decoration: none;
+		}
+	</style>
+
+	<!-- Optional JavaScript -->
+    <script type="module" src="app.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
